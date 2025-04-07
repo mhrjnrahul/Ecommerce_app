@@ -44,7 +44,7 @@ export const CarouselWithIndicatorsExample = () => {
           <div className="relative w-full h-[500px]">
             <CImage
               className="w-full h-full object-cover"
-              src="/Headphones.png"
+              src="/Headphones2.png"
               alt="slide 1"
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black/30">
