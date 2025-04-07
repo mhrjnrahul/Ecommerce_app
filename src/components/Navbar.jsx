@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-zinc-400 text-black p-6">
+    <nav className="bg-zinc-400 text-black p-6 m-3 rounded-lg">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold flex justify-between gap-2 items-center">
           <a href="/">My Shop</a>
