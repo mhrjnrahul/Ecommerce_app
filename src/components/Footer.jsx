@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
     return (
-      <footer className="mt-10 px-45 py-12 text-sm text-neutral-800 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <footer className="mt-10 px-6 md:px-45 py-12 text-sm text-neutral-800 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Left Column */}
         <div>
           <h1 className="text-2xl font-bold mb-2">SHOP STYLE</h1>
