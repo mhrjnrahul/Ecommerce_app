@@ -7,7 +7,6 @@ const App = () => {
   return (
     <div className='size-full'>
       <Navbar />
-      
       <Outlet />
     </div>
   )

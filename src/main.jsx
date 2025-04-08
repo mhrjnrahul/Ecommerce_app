@@ -6,9 +6,9 @@ import './index.css'
 import App from './App.jsx'
 import Home from './pages/Home.jsx'
 import Products from './pages/Products.jsx'
-import Categories from './pages/Categories.jsx'
-import Deals from './pages/Deals.jsx'
+import About from './pages/About.jsx'
 import NotFound from './pages/NotFound.jsx'
+import { Contact } from 'lucide-react'
 
 const router = createBrowserRouter([
   {
@@ -24,18 +24,18 @@ const router = createBrowserRouter([
         element: <Products />,
       },
       {
-        path: 'categories',
-        element: <Categories />,
+        path: 'contact',
+        element: <Contact />,
       },
       {
-        path: 'deals',
-        element: <Deals />,
+        path: 'about',
+        element: <About />,
       },
-      {
-        path: '*',
-        element: <NotFound />,
-      }
     ]
+  },
+  {
+    path: '*',
+    element: <NotFound />
   }
 ]);
 

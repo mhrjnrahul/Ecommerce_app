@@ -27,8 +27,8 @@ const Navbar = () => {
           <div className="hidden sm:flex items-center space-x-8">
             <Link to="/">Home</Link>
             <Link to="/products">Products</Link>
-            <Link to="/categories">Categories</Link>
-            <Link to="/deals">Deals</Link>
+            <Link to="/contact">Contact</Link>
+            <Link to="/about">About</Link>
           </div>
 
           <div className="flex items-center space-x-4">
