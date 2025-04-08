@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import Footer from "../components/Footer";
 
 const Contact = () => {
   return (
-    <div>Contact</div>
-  )
-}
+    <div>
+      <div className="flex items-center justify-center w-full h-[800px] bg-black"></div>
 
-export default Contact
+      <Footer />
+    </div>
+
+  );
+};
+
+export default Contact;
