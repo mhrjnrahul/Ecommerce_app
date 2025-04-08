@@ -6,9 +6,9 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <nav className="bg-white]">
+      <div className="max-w-7xl mx-auto px-6 md:px-16">
+        <div className="flex items-center justify-between h-20 mb-5">
           <div className="flex items-center">
             <button 
               className="sm:hidden p-2 hover:bg-gray-100 rounded-lg"
