@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ShoppingCart, Search, User, Menu, X } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -24,10 +25,10 @@ const Navbar = () => {
           </div>
           
           <div className="hidden sm:flex items-center space-x-8">
-            <a href="#" className="text-gray-600 hover:text-gray-900">Home</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900">Products</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900">Categories</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900">Deals</a>
+            <Link to="/" className="text-gray-600 hover:text-gray-900">Home</Link>
+            <Link to="/products" className="text-gray-600 hover:text-gray-900">Products</Link>
+            <Link to="/categories" className="text-gray-600 hover:text-gray-900">Categories</Link>
+            <Link to="/deals" className="text-gray-600 hover:text-gray-900">Deals</Link>
           </div>
 
           <div className="flex items-center space-x-4">
@@ -60,30 +61,26 @@ const Navbar = () => {
       >
         <div className="pt-20 px-4">
           <div className="space-y-3">
-            <a
-              href="#"
+            <Link to="/"
               className="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
             >
               Home
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link to="/products"
               className="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
             >
               Products
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link to="/categories"
               className="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
             >
               Categories
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link to="/deals"
               className="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
             >
               Deals
-            </a>
+            </Link>
           </div>
         </div>
       </div>
