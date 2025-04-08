@@ -25,10 +25,10 @@ const Navbar = () => {
           </div>
           
           <div className="hidden sm:flex items-center space-x-8">
-            <Link to="/" className="text-gray-600 hover:text-gray-900">Home</Link>
-            <Link to="/products" className="text-gray-600 hover:text-gray-900">Products</Link>
-            <Link to="/categories" className="text-gray-600 hover:text-gray-900">Categories</Link>
-            <Link to="/deals" className="text-gray-600 hover:text-gray-900">Deals</Link>
+            <Link to="/">Home</Link>
+            <Link to="/products">Products</Link>
+            <Link to="/categories">Categories</Link>
+            <Link to="/deals">Deals</Link>
           </div>
 
           <div className="flex items-center space-x-4">
@@ -62,22 +62,22 @@ const Navbar = () => {
         <div className="pt-20 px-4">
           <div className="space-y-3">
             <Link to="/"
-              className="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+              className="block px-4 py-3 rounded-lg text-base font-medium"
             >
               Home
             </Link>
             <Link to="/products"
-              className="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+              className="block px-4 py-3 rounded-lg text-base font-medium"
             >
               Products
             </Link>
             <Link to="/categories"
-              className="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+              className="block px-4 py-3 rounded-lg text-base font-medium"
             >
               Categories
             </Link>
             <Link to="/deals"
-              className="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+              className="block px-4 py-3 rounded-lg text-base font-medium"
             >
               Deals
             </Link>
