@@ -4,10 +4,10 @@ import "@coreui/coreui/dist/css/coreui.min.css";
 
 export const CarouselWithIndicatorsExample = () => {
   return (
-    <div className="w-full h-[600px] relative overflow-hidden">
+    <div className="max-w-6xl mx-auto h-[800px] relative overflow-hidden">
       <CCarousel controls indicators>
         <CCarouselItem>
-          <div className="relative w-full h-[500px]">
+          <div className="relative w-full h-[600px]">
             <CImage
               className="w-full h-full object-cover"
               src="/Headphones.png"
