@@ -1,9 +1,13 @@
 import React from 'react'
 import { CarouselWithIndicatorsExample } from '../components/Carousel'
+import FeaturedProducts from '../components/FeaturedProducts'
 
 const Home = () => {
   return (
-    <CarouselWithIndicatorsExample />
+    <div>
+        <CarouselWithIndicatorsExample />
+        <FeaturedProducts />
+    </div>
   )
 }
 
