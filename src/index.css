@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+a{
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+a:hover{
+    color: gray !important;
+}
