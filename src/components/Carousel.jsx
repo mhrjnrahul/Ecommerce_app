@@ -1,10 +1,10 @@
-import React from 'react'
-import { CCarousel, CCarouselItem, CImage } from '@coreui/react'
-import '@coreui/coreui/dist/css/coreui.min.css'
+import React from "react";
+import { CCarousel, CCarouselItem, CImage } from "@coreui/react";
+import "@coreui/coreui/dist/css/coreui.min.css";
 
 export const CarouselWithIndicatorsExample = () => {
   return (
-    <div className="w-full h-[500px] relative overflow-hidden">
+    <div className="w-full h-[600px] relative overflow-hidden">
       <CCarousel controls indicators>
         <CCarouselItem>
           <div className="relative w-full h-[500px]">
@@ -20,6 +20,15 @@ export const CarouselWithIndicatorsExample = () => {
                 Shop Now
               </button>
             </div>
+          </div>
+
+          <div className="py-6 text-center text-black">
+            <h3 className="text-xl font-semibold text-gray-800">
+              Explore the latest in audio tech
+            </h3>
+            <p className="text-gray-600 mt-2">
+              Headphones, earbuds & more engineered for style and sound.
+            </p>
           </div>
         </CCarouselItem>
 
@@ -58,5 +67,5 @@ export const CarouselWithIndicatorsExample = () => {
         </CCarouselItem>
       </CCarousel>
     </div>
-  )
-}
+  );
+};
