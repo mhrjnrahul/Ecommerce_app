@@ -47,6 +47,15 @@ export const CarouselWithIndicatorsExample = () => {
               </button>
             </div>
           </div>
+
+          <div className="py-6 text-center text-black">
+            <h3 className="text-xl font-semibold text-gray-800">
+              Explore the latest in audio tech
+            </h3>
+            <p className="text-gray-600 mt-2">
+              Headphones, earbuds & more engineered for style and sound.
+            </p>
+          </div>
         </CCarouselItem>
 
         <CCarouselItem>
@@ -63,6 +72,15 @@ export const CarouselWithIndicatorsExample = () => {
                 Shop Now
               </button>
             </div>
+          </div>
+
+          <div className="py-6 text-center text-black">
+            <h3 className="text-xl font-semibold text-gray-800">
+              Explore the latest in audio tech
+            </h3>
+            <p className="text-gray-600 mt-2">
+              Headphones, earbuds & more engineered for style and sound.
+            </p>
           </div>
         </CCarouselItem>
       </CCarousel>
