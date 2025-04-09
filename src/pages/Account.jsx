@@ -2,7 +2,22 @@ import React from 'react'
 
 const Account = () => {
   return (
-    <div>Account</div>
+    <div className='w-screen h-screen overflow-hidden flex justify-center items-center bg-[#F5F5F5]'>
+        <div className='flex flex-col gap-5 h-full w-full max-w-md items-center justify-center'>
+            <h2>Account</h2>
+            <form>
+                <div className='flex flex-col gap-2'>
+                    <label htmlFor="email">Email</label>
+                    <input type="email" id='email' placeholder='Enter your email' className='border border-gray-300 p-2 rounded-md'/>
+                </div>
+                <div className='flex flex-col gap-2'>
+                    <label htmlFor="password">Password</label>
+                    <input type="password" id='password' placeholder='Enter your password' className='border border-gray-300 p-2 rounded-md'/>
+                </div>
+                <button type="submit" className='bg-blue-500 text-white py-2 px-4 rounded-md'>Login</button>
+            </form>
+        </div>
+    </div>
   )
 }
 
