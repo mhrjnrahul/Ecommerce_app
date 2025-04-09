@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20 mb-5">
           <div className="flex items-center">
             <button 
-              className="sm:hidden p-2 hover:bg-gray-100 rounded-lg"
+              className="sm:hidden hover:bg-gray-100 rounded-lg"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
