@@ -49,23 +49,18 @@ const FeaturedProducts = ({
       <h2 className="text-2xl font-bold text-center mb-4">{title}</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:px-16 px-6">
         {displayProducts.map((product) => (
-          <div
-            key={product.id}
-            className="bg-white p-4 rounded-lg shadow-lg"
-          >
+          <div key={product.id} className="bg-white p-4 rounded-lg shadow-lg">
             <img
               src={product.image}
               alt={product.title}
               className="w-full h-80 object-cover mb-4 rounded"
             />
-            <p className="text-sm h-[40px] overflow-hidden">
-              {product.title}
-            </p>
+            <p className="text-sm h-[40px] overflow-hidden">{product.title}</p>
 
             <div className="mt-5 mb-auto flex justify-between items-center">
               <p className="text-gray-500">${product.price}</p>
               <Button variant="outline" className="rounded hover:bg-[#008080]">
-                <ShoppingCart/>
+                <ShoppingCart />
               </Button>
             </div>
           </div>
