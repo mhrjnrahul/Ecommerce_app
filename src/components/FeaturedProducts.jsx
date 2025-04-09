@@ -2,7 +2,12 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import fetchProducts from '../api/product';
 
-const FeaturedProducts = () => {
+const FeaturedProducts = ({
+  title = 'Featured Products',
+  limit = 4,
+  showAll = false,
+  className = ''
+}) => {
   const [featuredProducts, setFeaturedProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -29,11 +34,13 @@ const FeaturedProducts = () => {
     return <p>{error}</p>
   }
 
+  const displayProducts = showAll ? featuredProducts : featuredProducts.slice(0, limit);
+
   return (
     <div className="featured-products py-8">
         <h2 className="text-2xl font-bold text-center mb-4">Featured Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {featuredProducts.slice( 0,4 ).map((product) => (
+            {displayProducts.map((product) => (
                 <div key={product.id} className="bg-white p-4 rounded-lg shadow-lg">
                     <img src={product.image} alt={product.title} className="w-full h-48 object-cover mb-4" />
                     <h3 className="text-lg font-semibold">{product.title}</h3>
