@@ -27,7 +27,7 @@ const FeaturedProducts = ({
   }, [])
 
   if (loading) {
-    return <p>Loading...</p>
+    return <p className='w-full h-[500px] flex justify-center items-center text-4xl '>Loading...</p>
   } 
 
   if (error) {
