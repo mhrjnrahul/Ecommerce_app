@@ -1,5 +1,6 @@
 import React from 'react'
 import FeaturedProducts from '../components/FeaturedProducts'
+import Footer from '../components/Footer'
 
 const Products = () => {
   return (
@@ -8,6 +9,8 @@ const Products = () => {
       title='All Products'
       showAll='true'
       />
+
+      <Footer />
     </div>
   )
 }
