@@ -1,53 +1,54 @@
-import React from 'react'
+import React from "react";
+import { clsx } from "clsx"; 
 
 const Button = ({
-    children,
-    variant = '',
-    size = 'md',
-    icon,
-    iconPosition = 'left',
-    loading = false,
-    fullWidth = false,
-    disabled = false,
-    className = '',
-    onClick,
-    type = 'button',
-    ...props
+  children,
+  onClick,
+  type = "button",
+  variant = "primary",
+  size = "md",
+  className = "",
+  disabled = false,
+  loading = false,
+  icon: Icon = null,
 }) => {
-    const VARIANTS = {
-    primary: "bg-blue-600 hover:bg-blue-700 text-white",
-    secondary: "bg-gray-200 hover:bg-gray-300 text-gray-800",
-    login: "bg-green-600 hover:bg-green-700 text-white",
-    signup: "bg-purple-600 hover:bg-purple-700 text-white",
-    cart: "bg-orange-500 hover:bg-orange-600 text-white",
-    checkout: "bg-red-600 hover:bg-red-700 text-white",
-    wishlist: "bg-pink-500 hover:bg-pink-600 text-white",
-    outline: "bg-transparent border border-gray-300 text-gray-700 hover:bg-gray-50"
-    }
+  const baseStyles = "rounded-full font-medium transition-all flex items-center justify-center gap-2";
 
-    const SIZES = {
-        sm: "px-3 py-1 text:sm",
-        md: "px-4 py-2",
-        lg: "px-6 py-3 text-lg",
-    }
+  const variants = {
+    primary: "bg-black text-white hover:bg-gray-800",
+    outline: "border border-black text-black hover:bg-gray-100",
+    ghost: "text-black hover:bg-gray-200",
+  };
 
-    const baseClasses = "font-medium rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 flex items-center justify-center";
-    const variantClasses = VARIANTS[variant] || VARIANTS.primary;
-    const sizeClasses = SIZES[size] || SIZES.md;
-    const widthClass = fullWidth ? "w-full" : "";
-    const disabledClass = disabled || loading ? "opacity-60 cursor-not-allowed" : "cursor-pointer";
-    
-    const buttonClasses = `${baseClasses} ${variantClasses} ${sizeClasses} ${widthClass} ${disabledClass} ${className}`;
+  const sizes = {
+    sm: "text-sm px-3 py-1.5",
+    md: "text-base px-4 py-2",
+    lg: "text-lg px-5 py-2.5",
+  };
 
   return (
     <button
-    type={type}
-    className={buttonClasses}
-    disabled={disabled || loading}
-    onClick={onClick}>
-    {...props}
+      type={type}
+      onClick={onClick}
+      disabled={disabled || loading}
+      className={clsx(
+        baseStyles,
+        variants[variant],
+        sizes[size],
+        disabled ? "opacity-50 cursor-not-allowed" : "",
+        className
+      )}
+    >
+      {loading ? (
+        <span className="animate-spin rounded-full border-t-2 border-black w-4 h-4"></span>
+      ) : (
+        <>
+          {Icon && <Icon className="w-4 h-4" />}
+          {children}
+        </>
+      )}
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

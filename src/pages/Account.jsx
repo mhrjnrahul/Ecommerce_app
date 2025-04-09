@@ -1,4 +1,6 @@
 import React from 'react'
+import Button from '../components/Button'
+import { ShoppingCart, LogIn, UserPlus, Heart, CreditCard } from 'lucide-react';
 
 const Account = () => {
   return (
@@ -14,8 +16,9 @@ const Account = () => {
                     <label htmlFor="password">Password</label>
                     <input type="password" id='password' placeholder='Enter your password' className='border border-gray-300 p-2 rounded-md'/>
                 </div>
-                <button type="submit" className='bg-blue-500 text-white py-2 px-4 rounded-md'>Login</button>
+                <Button variant='outline'>Signup</Button>
             </form>
+            <p>Already have an account? Login</p>
         </div>
     </div>
   )
