@@ -8,7 +8,8 @@ const Home = () => {
   return (
     <div>
         <CarouselWithIndicatorsExample />
-        <FeaturedProducts />
+        <FeaturedProducts 
+        title='Featured Products'/>
         <Production />
         <Footer />
     </div>
