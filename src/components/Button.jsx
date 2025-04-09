@@ -16,7 +16,7 @@ const Button = ({
 
   const variants = {
     primary: "bg-black text-white hover:bg-gray-800",
-    outline: "border border-black text-black hover:bg-gray-100",
+    outline: "bg-blue-500 text-white",
     ghost: "text-black hover:bg-gray-200",
   };
 
