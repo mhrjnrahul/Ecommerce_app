@@ -71,15 +71,15 @@ const Navbar = () => {
             >
               Products
             </Link>
-            <Link to="/categories"
+            <Link to="/about"
               className="block px-4 py-3 rounded-lg text-base font-medium"
             >
-              Categories
+              About
             </Link>
-            <Link to="/deals"
+            <Link to="/contact"
               className="block px-4 py-3 rounded-lg text-base font-medium"
             >
-              Deals
+              Contact
             </Link>
           </div>
         </div>
