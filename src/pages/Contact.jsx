@@ -1,10 +1,14 @@
 import React from "react";
 import Footer from "../components/Footer";
+import { AnimatePresence } from "framer-motion";
+import { SlideUpTransition } from "../components/PageTransition";
 
 const Contact = () => {
   return (
     <div>
-      <div className="font-mono bg-[#F2F2F2] grid grid-cols-1 md:grid-cols-2 w-full h-auto md:px-45 px-6 py-20 md:py-40 gap-10">
+      <AnimatePresence mode="wait">
+        <SlideUpTransition>
+        <div className="font-mono bg-[#F2F2F2] grid grid-cols-1 md:grid-cols-2 w-full h-auto md:px-45 px-6 py-20 md:py-40 gap-10">
         <div className="flex flex-col gap-10 max-w-[400px] md:mx-0">
           <h1 className="">CONTACT US</h1>
           <div>
@@ -91,6 +95,8 @@ const Contact = () => {
           </form>
         </div>
       </div>
+          </SlideUpTransition>
+      </AnimatePresence>
 
       <Footer />
     </div>

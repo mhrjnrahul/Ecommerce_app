@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
-import { FadeTransition, SlideTransition, SlideUpTransition } from "../components/PageTransition";
+import { SlideUpTransition } from "../components/PageTransition";
 
 const Account = () => {
   const [hasAccount, setHasAccount] = useState(true);
