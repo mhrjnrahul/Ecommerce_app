@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { ShoppingCart, Search, User, Menu, X } from 'lucide-react';
+import { User, Menu, X } from 'lucide-react';
 import { Link } from "react-router-dom";
+import Cart from "./Cart";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -35,12 +36,7 @@ const Navbar = () => {
             <Link to="/account" className="p-2 hover:bg-gray-100 rounded-full">
               <User className="h-5 w-5 text-gray-600" />
             </Link>
-            <Link to="/cart" className="p-2 hover:bg-gray-100 rounded-full relative">
-              <ShoppingCart className="h-5 w-5 text-gray-600" />
-              {/* <span className="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
-                3
-              </span> */}
-            </Link>
+            <Cart />
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ import Products from './pages/Products.jsx'
 import About from './pages/About.jsx'
 import NotFound from './pages/NotFound.jsx'
 import Contact from './pages/Contact.jsx'
-import Cart from './pages/Cart.jsx'
+import Cart from './components/Cart.jsx'
 import Account from './pages/Account.jsx'
 
 const router = createBrowserRouter([
