@@ -40,7 +40,7 @@ const Cart = () => {
             </Link>
             <div className="flex flex-col justify-center items-center mt-3">
               <p className="text-xl">HAVE AN ACCOUNT?</p>
-              <p className="text-sm"><Link to="/account"><span className="underline">Login</span></Link> to check out faster.</p>
+              <p className="text-sm"><Link to="/account"><span className="underline" onClick={toggleCart}>Login</span></Link> to check out faster.</p>
             </div>
           </div>
         </div>
