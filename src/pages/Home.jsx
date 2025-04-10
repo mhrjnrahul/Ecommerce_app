@@ -3,16 +3,19 @@ import { CarouselWithIndicatorsExample } from '../components/Carousel'
 import FeaturedProducts from '../components/FeaturedProducts'
 import Production from '../components/Production'
 import Footer from '../components/Footer'
+import PageTransition, { FadeTransition } from '../components/PageTransition'
 
 const Home = () => {
   return (
-    <div>
+    <FadeTransition>
+      <div>
         <CarouselWithIndicatorsExample />
         <FeaturedProducts 
         title='Featured Products'/>
         <Production />
         <Footer />
     </div>
+    </FadeTransition>
   )
 }
 

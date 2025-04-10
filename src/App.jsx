@@ -1,13 +1,20 @@
 import React from 'react'
 import Navbar from './components/Navbar'
-import { CarouselWithIndicatorsExample } from './components/Carousel'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
 
-const App = () => {
+const App = (  ) => {
+  const location = useLocation();
+
   return (
     <div className='size-full'>
       <Navbar />
-      <Outlet />
+      
+      <AnimatePresence mode="wait">
+        <div key={location.pathname}>
+          <Outlet />
+        </div>
+      </AnimatePresence>
     </div>
   )
 }
