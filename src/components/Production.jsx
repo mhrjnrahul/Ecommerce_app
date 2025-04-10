@@ -1,4 +1,5 @@
 import React from 'react'
+import ScrollReveal from './ScrollReveal'
 
 const Production = () => {
     const productionSteps = [
@@ -25,22 +26,37 @@ const Production = () => {
   return (
     <div className='bg-[#DFD8CE] w-full py-16 px-4'>
         <div className='max-w-6xl mx-auto'>
+            <ScrollReveal
+            animation='fadeIn'
+            duration={1}
+            >
             <h2 className='text-2xl md:text-3xl font-mono tracking-wider mb-14'>
                 OUR PRODUCTION
             </h2>
+            </ScrollReveal>
 
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
                 {productionSteps.map(step => (
-                    <div key={step.id} className='flex flex-col'>
+                    
+                        <div key={step.id} className='flex flex-col'>
                         <div className='h-80 overflow-hidden mb-4'>
+                            <ScrollReveal
+                            animation='slideRight'
+                            duration={1}>
                             <img 
                             src={step.image}
                             alt={step.title}
                             className='w-full h-full object-cover'/>
+                            </ScrollReveal>
                         </div>
+                        <ScrollReveal
+                        animation='slideLeft'
+                        duration={0.7}>
                         <h3 className='font-mono text-sm tracking-wider mb-2'>{step.title}</h3>
                         <p className='text-xs leading-relaxed text-gray-700'>{step.description}</p>
+                        </ScrollReveal>
                     </div>
+                    
                 ))}
             </div>
         </div>
