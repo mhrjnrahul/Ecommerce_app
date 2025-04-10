@@ -16,11 +16,7 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
+              <Menu className="h-6 w-6" />
             </button>
             <div className="text-xl font-bold text-gray-800 ml-2 sm:ml-0">ShopStyle</div>
           </div>
@@ -55,7 +51,17 @@ const Navbar = () => {
           isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="pt-20 px-4">
+        <div className="flex justify-between items-center p-4">
+          <div className="text-xl px-3 font-bold text-gray-800">ShopStyle</div>
+          <button
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="p-2 hover:bg-gray-100 rounded-lg"
+            aria-label="Close menu"
+          >
+            <X className="h-6 w-6"/>
+          </button>
+        </div>
+        <div className="pt-20 px-3">
           <div className="space-y-3">
             <Link to="/"
               className="block px-4 py-3 rounded-lg text-base font-medium"
