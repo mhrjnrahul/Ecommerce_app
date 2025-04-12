@@ -44,22 +44,46 @@ const ScrollReveal = ({
     const { from, to } = animations[animation] || animations.fadeUp;
 
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        element,
-        { ...from },
-        {
-          ...to,
-          duration,
-          delay,
-          scrollTrigger: {
-            trigger: element,
-            start,
-            end,
-            toggleActions: 'play none none reverse', 
-            markers: false,
-          },
-        }
-      );
+      ScrollTrigger.matchMedia({
+        // Desktop and larger
+        "(min-width: 768px)": () => {
+          gsap.fromTo(
+            element,
+            { ...from },
+            {
+              ...to,
+              duration,
+              delay,
+              scrollTrigger: {
+                trigger: element,
+                start,
+                end,
+                toggleActions: 'play none none none',
+                markers: false,
+              },
+            }
+          );
+        },
+        // Mobile devices
+        "(max-width: 767px)": () => {
+          gsap.fromTo(
+            element,
+            { ...from },
+            {
+              ...to,
+              duration: duration * 0.8, // shorter animation for mobile
+              delay: delay * 0.5, // less delay on mobile
+              scrollTrigger: {
+                trigger: element,
+                start: 'top 95%', // trigger later
+                end: 'bottom 10%',
+                toggleActions: 'play none none none',
+                markers: false,
+              },
+            }
+          );
+        },
+      });
     }, elementRef);
 
     return () => ctx.revert(); // Cleanup
