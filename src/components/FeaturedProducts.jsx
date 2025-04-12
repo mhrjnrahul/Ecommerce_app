@@ -4,7 +4,6 @@ import fetchProducts from "../api/product";
 import { ShoppingCart } from "lucide-react";
 import Button from "./Button";
 import ScrollReveal from "./ScrollReveal";
-
 import { useCart } from "../context/CartContext";
 
 const FeaturedProducts = ({
@@ -18,6 +17,8 @@ const FeaturedProducts = ({
   const [error, setError] = useState(null);
 
   const { addToCart } = useCart();
+
+
 
   useEffect(() => {
     const getProducts = async () => {

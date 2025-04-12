@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import { Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import Cart from "./components/Cart";
 
 const App = () => {
   const location = useLocation();
