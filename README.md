@@ -1,12 +1,66 @@
-# React + Vite
+# 🛍️ E-Commerce Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek and modern eCommerce frontend built using **React**, **React Router**, **Tailwind CSS**, and **React Hot Toast**. It features dynamic product listings, cart management using Context API, scroll animations, and clean responsive design.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🛒 Add to cart with real-time toast notifications
+- 📦 Product listings from a mock API
+- 🧭 Client-side routing with `react-router-dom`
+- 🎨 Styled with Tailwind CSS
+- 📱 Responsive design
+- 💡 Scroll-based reveal animations
 
-## Expanding the ESLint configuration
+## 🧱 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React.js](https://reactjs.org/)
+- [React Router DOM](https://reactrouter.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Hot Toast](https://react-hot-toast.com/)
+- [Lucide React](https://lucide.dev/)
+- [Framer Motion]# 🛍️ E-Commerce Frontend
+
+A sleek and modern eCommerce frontend built using **React**, **React Router**, **Tailwind CSS**, and **React Hot Toast**. It features dynamic product listings, cart management using Context API, scroll animations, and clean responsive design.
+
+## 🚀 Features
+
+- 🛒 Add to cart with real-time toast notifications
+- 📦 Product listings from a mock API
+- 🧭 Client-side routing with `react-router-dom`
+- 🎨 Styled with Tailwind CSS
+- 📱 Responsive design
+- 💡 Scroll-based reveal animations
+- 🔄 Cart persistence during session (stateful)
+- ⚠️ Error handling and loading states
+
+## 🧱 Tech Stack
+
+- [React.js](https://reactjs.org/)
+- [React Router DOM](https://reactrouter.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Hot Toast](https://react-hot-toast.com/)
+- [Lucide React](https://lucide.dev/)
+- [Framer Motion](https://www.framer.com/motion/) 
+- [Gsap](https://gsap.com/)
+
+
+## 🔧 Installation
+
+1. Clone the repository
+
+git clone https://github.com/your-username/ecommerce-frontend.git
+cd ecommerce-frontend
+
+2. Install dependencies
+
+npm install
+# or
+yarn
+
+3. Run the app
+
+npm run dev
+# or
+yarn dev
+
+
