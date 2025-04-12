@@ -7,7 +7,7 @@ import { SlideUpTransition } from "../components/PageTransition";
 const Products = () => {
   return (
     <div>
-          <FeaturedProducts title="All Products" showAll={true} />
+          <FeaturedProducts title="All Products" showAll={true} withReveal={true} />
         
       <Footer />
     </div>
