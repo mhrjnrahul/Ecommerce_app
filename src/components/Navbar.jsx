@@ -65,21 +65,25 @@ const Navbar = () => {
           <div className="space-y-3">
             <Link to="/"
               className="block px-4 py-3 rounded-lg text-base font-medium"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Home
             </Link>
             <Link to="/products"
               className="block px-4 py-3 rounded-lg text-base font-medium"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Products
             </Link>
             <Link to="/about"
               className="block px-4 py-3 rounded-lg text-base font-medium"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               About
             </Link>
             <Link to="/contact"
               className="block px-4 py-3 rounded-lg text-base font-medium"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact
             </Link>
