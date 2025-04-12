@@ -1,22 +1,22 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import { Outlet, useLocation } from 'react-router-dom'
-import { AnimatePresence } from 'framer-motion'
+import React from "react";
+import Navbar from "./components/Navbar";
+import { Outlet, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import Cart from "./components/Cart";
 
-const App = (  ) => {
+const App = () => {
   const location = useLocation();
 
   return (
-    <div className='size-full'>
+    <div className="size-full">
       <Navbar />
-      
       <AnimatePresence mode="wait">
         <div key={location.pathname}>
           <Outlet />
         </div>
       </AnimatePresence>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

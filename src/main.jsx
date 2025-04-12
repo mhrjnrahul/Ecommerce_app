@@ -11,6 +11,7 @@ import NotFound from './pages/NotFound.jsx'
 import Contact from './pages/Contact.jsx'
 import Cart from './components/Cart.jsx'
 import Account from './pages/Account.jsx'
+import { CartProvider } from './context/CartContext.jsx'
 
 const router = createBrowserRouter([
   {
@@ -43,14 +44,12 @@ const router = createBrowserRouter([
     path: '/account',
     element: <Account />
   },
-  {
-    path: '/cart',
-    element: <Cart />
-  }
 ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <CartProvider>
     <RouterProvider router={router} />
+    </CartProvider>
   </StrictMode>,
 )

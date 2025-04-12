@@ -3,8 +3,12 @@ import { ShoppingCart, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import Button from "./Button";
 
+import { useCart } from "../context/CartContext";
+
 const Cart = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const { cartItems, removeFromCart } = useCart();
 
   const toggleCart = () => {
     setIsCartOpen(!isCartOpen);
@@ -28,7 +32,35 @@ const Cart = () => {
             <X size={30} onClick={toggleCart} />
           </div>
           <div className="h-140 flex flex-col justify-center gap-3 items-center w-full font-mono">
-            <h2 className="leading-relaxed">YOUR CART IS EMPTY</h2>
+            {cartItems.length === 0 ? (
+              <h2 className="leading-relaxed">YOUR CART IS EMPTY</h2>
+            ) : (
+              <div className="p-4 w-full overflow-y-auto flex-1">
+                {cartItems.map((item) => (
+                  <div
+                    key={item.id}
+                    className="flex justify-between items-center border-b py-3"
+                  >
+                    <div>
+                      <p className="font-medium">{item.title}</p>
+                      <p className="text-sm text-gray-600">
+                        Qty: {item.quantity}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <p>${(item.price * item.quantity).toFixed(2)}</p>
+                      <button
+                        className="text-red-500"
+                        onClick={() => removeFromCart(item.id)}
+                      >
+                        <X size={18} />
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
             <Link to="/products">
               <Button
                 variant="primary"
@@ -38,10 +70,19 @@ const Cart = () => {
                 Continue Shopping
               </Button>
             </Link>
-            <div className="flex flex-col justify-center items-center mt-3">
-              <p className="text-xl">HAVE AN ACCOUNT?</p>
-              <p className="text-sm"><Link to="/account"><span className="underline" onClick={toggleCart}>Login</span></Link> to check out faster.</p>
-            </div>
+            {cartItems.length === 0 && (
+              <div className="flex flex-col justify-center items-center mt-3">
+                <p className="text-xl">HAVE AN ACCOUNT?</p>
+                <p className="text-sm">
+                  <Link to="/account">
+                    <span className="underline" onClick={toggleCart}>
+                      Login
+                    </span>
+                  </Link>{" "}
+                  to check out faster.
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </div>
