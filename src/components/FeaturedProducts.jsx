@@ -55,8 +55,8 @@ const FeaturedProducts = ({
       <h2 className="text-2xl font-bold text-center mb-4">{title}</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:px-16 px-6">
         {displayProducts.map((product) => (
-          <ScrollReveal animation="fadeUp" delay={0.2}>
-            <div key={product.id} className="bg-white p-4 rounded-lg shadow-lg">
+          <ScrollReveal key={product.id} animation="fadeUp" delay={0.2}>
+            <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
                 src={product.image}
                 alt={product.title}

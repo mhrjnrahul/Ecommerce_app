@@ -8,8 +8,8 @@ const Products = () => {
   return (
     <div>
       <AnimatePresence mode="wait">
-        <SlideUpTransition>
-          <FeaturedProducts title="All Products" showAll="true" />
+        <SlideUpTransition key="featured-products">
+          <FeaturedProducts title="All Products" showAll={true} />
         </SlideUpTransition>
       </AnimatePresence>
 

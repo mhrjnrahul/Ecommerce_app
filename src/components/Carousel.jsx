@@ -18,11 +18,6 @@ export const CarouselWithIndicatorsExample = () => {
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black/30">
               <h2 className="text-4xl font-bold">Accessories Sale</h2>
               <p className="mt-2 text-lg">Up to 50% off on selected items</p>
-            
-
-              
-              <Button variant="outline" className="rounded hover:bg-[#008080]">Shop Now</Button>
-              
             </div>
           </div>
 
@@ -46,7 +41,6 @@ export const CarouselWithIndicatorsExample = () => {
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black/30">
               <h2 className="text-4xl font-bold">Accessories Sale</h2>
               <p className="mt-2 text-lg">Up to 50% off on selected items</p>
-              <Button variant="outline" className="rounded hover:bg-[#008080]">Shop Now</Button>
             </div>
           </div>
 
@@ -70,7 +64,6 @@ export const CarouselWithIndicatorsExample = () => {
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black/30">
               <h2 className="text-4xl font-bold">Accessories Sale</h2>
               <p className="mt-2 text-lg">Up to 50% off on selected items</p>
-              <Button variant="outline" className="rounded hover:bg-[#008080]">Shop Now</Button>
             </div>
           </div>
 
