@@ -7,7 +7,7 @@ const App = () => {
   const location = useLocation();
 
   return (
-    <div className="size-full overflow-x-hidden">
+    <div className="size-full">
       <Navbar />
       <AnimatePresence mode="wait">
         <div key={location.pathname}>

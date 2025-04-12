@@ -45,7 +45,7 @@ const ScrollReveal = ({
 
     const ctx = gsap.context(() => {
       ScrollTrigger.matchMedia({
-        // Desktop and larger
+        // Desktop (≥768px)
         "(min-width: 768px)": () => {
           gsap.fromTo(
             element,
@@ -64,18 +64,19 @@ const ScrollReveal = ({
             }
           );
         },
-        // Mobile devices
+
+        // Mobile (<768px)
         "(max-width: 767px)": () => {
           gsap.fromTo(
             element,
             { ...from },
             {
               ...to,
-              duration: duration * 0.8, // shorter animation for mobile
-              delay: delay * 0.5, // less delay on mobile
+              duration: duration, // same duration for consistency
+              delay: delay * 0.5, // slightly faster on mobile
               scrollTrigger: {
                 trigger: element,
-                start: 'top 95%', // trigger later
+                start: 'top 95%', // trigger when closer to viewport top
                 end: 'bottom 10%',
                 toggleActions: 'play none none none',
                 markers: false,
@@ -86,7 +87,7 @@ const ScrollReveal = ({
       });
     }, elementRef);
 
-    return () => ctx.revert(); // Cleanup
+    return () => ctx.revert(); // cleanup on unmount
   }, [animation, delay, duration, start, end]);
 
   return <div ref={elementRef}>{children}</div>;
