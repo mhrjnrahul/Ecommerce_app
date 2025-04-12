@@ -11,7 +11,7 @@ const Home = () => {
       <div>
         <CarouselWithIndicatorsExample />
         <FeaturedProducts 
-        title='Featured Products'/>
+        title='Featured Products'withReveal={true}/>
         <Production />
         <Footer />
     </div>

@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import fetchProducts from "../api/product";
 import { ShoppingCart } from "lucide-react";
 import Button from "./Button";
@@ -11,14 +10,13 @@ const FeaturedProducts = ({
   limit = 4,
   showAll = false,
   className = "",
+  withReveal = false,
 }) => {
   const [featuredProducts, setFeaturedProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const { addToCart } = useCart();
-
-
 
   useEffect(() => {
     const getProducts = async () => {
@@ -36,7 +34,7 @@ const FeaturedProducts = ({
 
   if (loading) {
     return (
-      <p className="w-full h-[500px] flex justify-center items-center text-4xl ">
+      <p className="w-full h-[500px] flex justify-center items-center text-4xl">
         Loading...
       </p>
     );
@@ -51,11 +49,11 @@ const FeaturedProducts = ({
     : featuredProducts.slice(0, limit);
 
   return (
-    <div className="featured-products py-8">
+    <div className={`featured-products py-8 ${className}`}>
       <h2 className="text-2xl font-bold text-center mb-4">{title}</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:px-16 px-6">
-        {displayProducts.map((product) => (
-          <ScrollReveal key={product.id} animation="fadeUp" delay={0.2}>
+        {displayProducts.map((product) => {
+          const Card = (
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
                 src={product.image}
@@ -77,8 +75,16 @@ const FeaturedProducts = ({
                 </Button>
               </div>
             </div>
-          </ScrollReveal>
-        ))}
+          );
+
+          return withReveal ? (
+            <ScrollReveal key={product.id} animation="fadeUp" delay={0.2}>
+              {Card}
+            </ScrollReveal>
+          ) : (
+            <div key={product.id}>{Card}</div>
+          );
+        })}
       </div>
     </div>
   );

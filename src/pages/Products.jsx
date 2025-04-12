@@ -7,12 +7,8 @@ import { SlideUpTransition } from "../components/PageTransition";
 const Products = () => {
   return (
     <div>
-      <AnimatePresence mode="wait">
-        <SlideUpTransition key="featured-products">
           <FeaturedProducts title="All Products" showAll={true} />
-        </SlideUpTransition>
-      </AnimatePresence>
-
+        
       <Footer />
     </div>
   );
