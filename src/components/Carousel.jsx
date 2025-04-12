@@ -1,6 +1,8 @@
 import React from "react";
 import { CCarousel, CCarouselItem, CImage } from "@coreui/react";
 import "@coreui/coreui/dist/css/coreui.min.css";
+import Button from "./Button";
+import { Link } from "lucide-react";
 
 export const CarouselWithIndicatorsExample = () => {
   return (
@@ -14,11 +16,13 @@ export const CarouselWithIndicatorsExample = () => {
               alt="slide 1"
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black/30">
-              {/* <h2 className="text-4xl font-bold">Accessories Sale</h2>
-              <p className="mt-2 text-lg">Up to 50% off on selected items</p> */}
-              <button className="mt-4 px-6 py-2 bg-white text-black rounded-full font-medium hover:bg-gray-100">
-                Shop Now
-              </button>
+              <h2 className="text-4xl font-bold">Accessories Sale</h2>
+              <p className="mt-2 text-lg">Up to 50% off on selected items</p>
+            
+
+              
+              <Button variant="outline" className="rounded hover:bg-[#008080]">Shop Now</Button>
+              
             </div>
           </div>
 
@@ -42,9 +46,7 @@ export const CarouselWithIndicatorsExample = () => {
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black/30">
               <h2 className="text-4xl font-bold">Accessories Sale</h2>
               <p className="mt-2 text-lg">Up to 50% off on selected items</p>
-              <button className="mt-4 px-6 py-2 bg-white text-black rounded-full font-medium hover:bg-gray-100">
-                Shop Now
-              </button>
+              <Button variant="outline" className="rounded hover:bg-[#008080]">Shop Now</Button>
             </div>
           </div>
 
@@ -68,9 +70,7 @@ export const CarouselWithIndicatorsExample = () => {
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black/30">
               <h2 className="text-4xl font-bold">Accessories Sale</h2>
               <p className="mt-2 text-lg">Up to 50% off on selected items</p>
-              <button className="mt-4 px-6 py-2 bg-white text-black rounded-full font-medium hover:bg-gray-100">
-                Shop Now
-              </button>
+              <Button variant="outline" className="rounded hover:bg-[#008080]">Shop Now</Button>
             </div>
           </div>
 
